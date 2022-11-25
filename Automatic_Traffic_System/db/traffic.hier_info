@@ -1,0 +1,246 @@
+|traffic
+a <= b2seg:inst10.a
+Rst => inst6.IN0
+clk => inst1.CLK
+clk => trigger:inst2.CLK
+clk => fourbit_register_ce:inst8.clk
+clk => fourbit_register_ce:inst11.clk
+star => inst1.DATAIN
+star => inst21.IN0
+star => inst20.IN1
+star => LED1.DATAIN
+in5 => inst3.IN0
+in5 => d2b:inst.d5
+in3 => inst3.IN1
+in3 => d2b:inst.d3
+in4 => inst3.IN2
+in4 => d2b:inst.d4
+in2 => inst3.IN3
+in2 => d2b:inst.d2
+in1 => inst3.IN4
+in1 => d2b:inst.d1
+in0 => inst3.IN5
+in0 => d2b:inst.d0
+in9 => inst4.IN0
+in9 => d2b:inst.d9
+in7 => inst4.IN1
+in7 => d2b:inst.d7
+in6 => inst4.IN2
+in6 => d2b:inst.d6
+in8 => inst4.IN3
+in8 => d2b:inst.d8
+b <= b2seg:inst10.b
+c <= b2seg:inst10.c
+d <= b2seg:inst10.d
+e <= b2seg:inst10.e
+f <= b2seg:inst10.f
+g <= b2seg:inst10.g
+com1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+com2 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+com3 <= <VCC>
+com4 <= <VCC>
+com5 <= <VCC>
+com6 <= <VCC>
+com7 <= <VCC>
+com8 <= <VCC>
+LED1 <= star.DB_MAX_OUTPUT_PORT_TYPE
+LED2 <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|traffic|b2seg:inst10
+a <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+A1 => inst12.IN0
+A1 => inst53.IN2
+A1 => inst10.IN3
+A1 => inst11.IN0
+C1 => inst4.IN1
+C1 => inst3.IN0
+C1 => inst20.IN1
+C1 => inst27.IN1
+C1 => inst26.IN0
+C1 => inst29.IN0
+C1 => inst34.IN0
+C1 => inst35.IN1
+B1 => inst2.IN0
+B1 => inst5.IN1
+B1 => inst21.IN1
+B1 => inst25.IN0
+B1 => inst31.IN0
+B1 => inst32.IN0
+B1 => inst33.IN0
+D1 => inst50.IN0
+D1 => inst5.IN2
+D1 => inst20.IN2
+D1 => inst23.IN1
+D1 => inst25.IN2
+b <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+c <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+d <= inst54.DB_MAX_OUTPUT_PORT_TYPE
+e <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+f <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+g <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|traffic|mx_4bit_2x1:inst18
+m_out[0] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+m_out[1] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+m_out[2] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+m_out[3] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+ce => inst8.IN0
+ce => inst.IN1
+ce => inst1.IN1
+ce => inst2.IN1
+ce => inst3.IN1
+s0[0] => inst4.IN1
+s0[1] => inst5.IN1
+s0[2] => inst6.IN1
+s0[3] => inst7.IN1
+s1[0] => inst.IN0
+s1[1] => inst1.IN0
+s1[2] => inst2.IN0
+s1[3] => inst3.IN0
+
+
+|traffic|fourbit_register_ce:inst8
+Dout[0] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Dout[1] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Dout[2] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Dout[3] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+rst => inst4.ACLR
+rst => inst6.ACLR
+rst => inst5.ACLR
+rst => inst7.ACLR
+clk => inst4.CLK
+clk => inst6.CLK
+clk => inst5.CLK
+clk => inst7.CLK
+Din[0] => mx_2x1:inst3.s_1
+Din[1] => mx_2x1:inst2.s_1
+Din[2] => mx_2x1:inst1.s_1
+Din[3] => mx_2x1:inst.s_1
+ce => mx_2x1:inst.sel
+ce => mx_2x1:inst2.sel
+ce => mx_2x1:inst1.sel
+ce => mx_2x1:inst3.sel
+
+
+|traffic|fourbit_register_ce:inst8|mx_2x1:inst
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|traffic|fourbit_register_ce:inst8|mx_2x1:inst2
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|traffic|fourbit_register_ce:inst8|mx_2x1:inst1
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|traffic|fourbit_register_ce:inst8|mx_2x1:inst3
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|traffic|trigger:inst2
+Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+rst_n => inst3.ACLR
+CLK => inst2.CLK
+CLK => inst3.CLK
+Din => inst2.DATAIN
+
+
+|traffic|d2b:inst
+b0 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+d0 => inst20.IN0
+d9 => inst21.IN0
+d9 => inst23.IN0
+d7 => inst55.IN0
+d7 => inst15.IN0
+d7 => inst17.IN0
+d5 => inst55.IN1
+d5 => inst16.IN0
+d3 => inst.IN0
+d3 => inst155.IN0
+d1 => inst.IN1
+b1 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+d6 => inst15.IN1
+d6 => inst17.IN1
+d2 => inst155.IN1
+b2 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+d4 => inst16.IN1
+b3 <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+d8 => inst23.IN1
+
+
+|traffic|fourbit_register_ce:inst11
+Dout[0] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Dout[1] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Dout[2] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Dout[3] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+rst => inst4.ACLR
+rst => inst6.ACLR
+rst => inst5.ACLR
+rst => inst7.ACLR
+clk => inst4.CLK
+clk => inst6.CLK
+clk => inst5.CLK
+clk => inst7.CLK
+Din[0] => mx_2x1:inst3.s_1
+Din[1] => mx_2x1:inst2.s_1
+Din[2] => mx_2x1:inst1.s_1
+Din[3] => mx_2x1:inst.s_1
+ce => mx_2x1:inst.sel
+ce => mx_2x1:inst2.sel
+ce => mx_2x1:inst1.sel
+ce => mx_2x1:inst3.sel
+
+
+|traffic|fourbit_register_ce:inst11|mx_2x1:inst
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|traffic|fourbit_register_ce:inst11|mx_2x1:inst2
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|traffic|fourbit_register_ce:inst11|mx_2x1:inst1
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|traffic|fourbit_register_ce:inst11|mx_2x1:inst3
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+

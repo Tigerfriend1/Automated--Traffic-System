@@ -1,0 +1,35 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "Rst" LOC = V1;
+NET "LED1" LOC = K8;
+NET "LED2" LOC = M4;
+NET "in0" LOC = L1;
+NET "in1" LOC = K2;
+NET "in2" LOC = M3;
+NET "in3" LOC = M1;
+NET "in4" LOC = N3;
+NET "in5" LOC = N1;
+NET "in6" LOC = M2;
+NET "in7" LOC = L3;
+NET "in8" LOC = K4;
+NET "in9" LOC = K1;
+NET "star" LOC = L4;
+NET "a" LOC = E6;
+NET "b" LOC = E5;
+NET "c" LOC = D5;
+NET "d" LOC = D6;
+NET "e" LOC = J6;
+NET "f" LOC = H8;
+NET "g" LOC = H6;
+NET "com1" LOC = G7;
+NET "com2" LOC = G6;
+NET "com3" LOC = F7;
+NET "com4" LOC = F5;
+NET "com5" LOC = K7;
+NET "com6" LOC = K6;
+NET "com7" LOC = K5;
+NET "com8" LOC = J7;
+NET "clk" LOC = AB16;
+NET "clk" IOSTANDARD = LVCMOS25; 
+NET "clk" CLOCK_DEDICATED_ROUTE = FALSE;
