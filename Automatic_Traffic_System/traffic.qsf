@@ -44,6 +44,8 @@ set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:36:15  NOVEMBER 21, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name BDF_FILE twoBitComparator.bdf
+set_global_assignment -name BDF_FILE newComparator.bdf
 set_global_assignment -name BDF_FILE trigger.bdf
 set_global_assignment -name BDF_FILE mx_4bit_2x1.bdf
 set_global_assignment -name BDF_FILE mx_2x1.bdf
@@ -52,3 +54,4 @@ set_global_assignment -name BDF_FILE d2b.bdf
 set_global_assignment -name BDF_FILE counter4.bdf
 set_global_assignment -name BDF_FILE b2seg.bdf
 set_global_assignment -name BDF_FILE traffic.bdf
+set_global_assignment -name BDF_FILE changeToZero.bdf
