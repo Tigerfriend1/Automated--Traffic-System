@@ -232,7 +232,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 1456 104 1624 120)
 	(text "INPUT" (rect 125 6 153 16)(font "Arial" (font_size 6)))
-	(text "shap" (rect 5 5 29 17)(font "Arial" ))
+	(text "shap" (rect 5 5 28 17)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 4)(pt 109 4))
@@ -506,22 +506,6 @@ https://fpgasoftware.intel.com/eula.
 	(rect 1096 1384 1272 1400)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "LED1" (rect 90 0 114 17)(font "Intel Clear" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-)
-(pin
-	(output)
-	(rect 2880 240 3056 256)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "pin_name1" (rect 90 0 143 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
