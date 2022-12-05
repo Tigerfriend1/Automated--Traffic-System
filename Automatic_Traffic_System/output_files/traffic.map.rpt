@@ -1,5 +1,5 @@
 Analysis & Synthesis report for traffic
-Mon Nov 21 20:43:45 2022
+Mon Dec 05 21:44:35 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,8 +13,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -41,13 +42,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Nov 21 20:43:45 2022       ;
+; Analysis & Synthesis Status ; Successful - Mon Dec 05 21:44:35 2022       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; traffic                                     ;
 ; Top-level Entity Name       ; traffic                                     ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 32                                          ;
-; Total pins                  ; 30                                          ;
+; Total logic elements        ; 33                                          ;
+; Total pins                  ; 31                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -139,19 +140,23 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                           ; Library ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
-; trigger.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/user/Desktop/Automatic_Traffic_System/trigger.bdf             ;         ;
-; mx_4bit_2x1.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/user/Desktop/Automatic_Traffic_System/mx_4bit_2x1.bdf         ;         ;
-; mx_2x1.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/user/Desktop/Automatic_Traffic_System/mx_2x1.bdf              ;         ;
-; fourbit_register_ce.bdf          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/user/Desktop/Automatic_Traffic_System/fourbit_register_ce.bdf ;         ;
-; d2b.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/user/Desktop/Automatic_Traffic_System/d2b.bdf                 ;         ;
-; b2seg.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/user/Desktop/Automatic_Traffic_System/b2seg.bdf               ;         ;
-; traffic.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/user/Desktop/Automatic_Traffic_System/traffic.bdf             ;         ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                       ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+---------+
+; twoBitComparator.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/user/Desktop/Automatic-Traffic-System-main/Automatic-Traffic-System-main/Automatic_Traffic_System/twoBitComparator.bdf    ;         ;
+; newComparator.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/user/Desktop/Automatic-Traffic-System-main/Automatic-Traffic-System-main/Automatic_Traffic_System/newComparator.bdf       ;         ;
+; trigger.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/user/Desktop/Automatic-Traffic-System-main/Automatic-Traffic-System-main/Automatic_Traffic_System/trigger.bdf             ;         ;
+; mx_4bit_2x1.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/user/Desktop/Automatic-Traffic-System-main/Automatic-Traffic-System-main/Automatic_Traffic_System/mx_4bit_2x1.bdf         ;         ;
+; mx_2x1.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/user/Desktop/Automatic-Traffic-System-main/Automatic-Traffic-System-main/Automatic_Traffic_System/mx_2x1.bdf              ;         ;
+; fourbit_register_ce.bdf          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/user/Desktop/Automatic-Traffic-System-main/Automatic-Traffic-System-main/Automatic_Traffic_System/fourbit_register_ce.bdf ;         ;
+; d2b.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/user/Desktop/Automatic-Traffic-System-main/Automatic-Traffic-System-main/Automatic_Traffic_System/d2b.bdf                 ;         ;
+; counter4.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/user/Desktop/Automatic-Traffic-System-main/Automatic-Traffic-System-main/Automatic_Traffic_System/counter4.bdf            ;         ;
+; b2seg.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/user/Desktop/Automatic-Traffic-System-main/Automatic-Traffic-System-main/Automatic_Traffic_System/b2seg.bdf               ;         ;
+; traffic.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/user/Desktop/Automatic-Traffic-System-main/Automatic-Traffic-System-main/Automatic_Traffic_System/traffic.bdf             ;         ;
+; changeToZero.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/user/Desktop/Automatic-Traffic-System-main/Automatic-Traffic-System-main/Automatic_Traffic_System/changeToZero.bdf        ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -159,20 +164,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 32    ;
-;     -- Combinational with no register       ; 21    ;
-;     -- Register only                        ; 10    ;
-;     -- Combinational with a register        ; 1     ;
+; Total logic elements                        ; 33    ;
+;     -- Combinational with no register       ; 22    ;
+;     -- Register only                        ; 9     ;
+;     -- Combinational with a register        ; 2     ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 11    ;
-;     -- 3 input functions                    ; 9     ;
-;     -- 2 input functions                    ; 2     ;
+;     -- 3 input functions                    ; 8     ;
+;     -- 2 input functions                    ; 5     ;
 ;     -- 1 input functions                    ; 0     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 32    ;
+;     -- normal mode                          ; 33    ;
 ;     -- arithmetic mode                      ; 0     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
@@ -180,11 +185,11 @@ https://fpgasoftware.intel.com/eula.
 ;     -- asynchronous clear/load mode         ; 11    ;
 ;                                             ;       ;
 ; Total registers                             ; 11    ;
-; I/O pins                                    ; 30    ;
-; Maximum fan-out node                        ; clk   ;
+; I/O pins                                    ; 31    ;
+; Maximum fan-out node                        ; inst7 ;
 ; Maximum fan-out                             ; 11    ;
-; Total fan-out                               ; 126   ;
-; Average fan-out                             ; 2.03  ;
+; Total fan-out                               ; 128   ;
+; Average fan-out                             ; 2.00  ;
 +---------------------------------------------+-------+
 
 
@@ -193,15 +198,32 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node      ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                 ; Entity Name         ; Library Name ;
 +---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------+---------------------+--------------+
-; |traffic                        ; 32 (6)      ; 11           ; 0          ; 30   ; 0            ; 21 (5)       ; 10 (1)            ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |traffic                            ; traffic             ; work         ;
+; |traffic                        ; 33 (6)      ; 11           ; 0          ; 31   ; 0            ; 22 (5)       ; 9 (0)             ; 2 (1)            ; 0 (0)           ; 0 (0)      ; |traffic                            ; traffic             ; work         ;
 ;    |b2seg:inst10|               ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |traffic|b2seg:inst10               ; b2seg               ; work         ;
-;    |d2b:inst|                   ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |traffic|d2b:inst                   ; d2b                 ; work         ;
 ;    |fourbit_register_ce:inst11| ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |traffic|fourbit_register_ce:inst11 ; fourbit_register_ce ; work         ;
 ;    |fourbit_register_ce:inst8|  ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |traffic|fourbit_register_ce:inst8  ; fourbit_register_ce ; work         ;
 ;    |mx_4bit_2x1:inst18|         ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |traffic|mx_4bit_2x1:inst18         ; mx_4bit_2x1         ; work         ;
+;    |mx_4bit_2x1:inst19|         ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |traffic|mx_4bit_2x1:inst19         ; mx_4bit_2x1         ; work         ;
 ;    |trigger:inst2|              ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |traffic|trigger:inst2              ; trigger             ; work         ;
 +---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; fourbit_register_ce:inst14|inst4      ; Lost fanout        ;
+; fourbit_register_ce:inst14|inst6      ; Lost fanout        ;
+; fourbit_register_ce:inst14|inst5      ; Lost fanout        ;
+; fourbit_register_ce:inst14|inst7      ; Lost fanout        ;
+; fourbit_register_ce:inst15|inst4      ; Lost fanout        ;
+; fourbit_register_ce:inst15|inst6      ; Lost fanout        ;
+; fourbit_register_ce:inst15|inst5      ; Lost fanout        ;
+; fourbit_register_ce:inst15|inst7      ; Lost fanout        ;
+; Total Number of Removed Registers = 8 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -225,10 +247,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Nov 21 20:43:34 2022
+    Info: Processing started: Mon Dec 05 21:44:23 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off traffic -c traffic
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file twobitcomparator.bdf
+    Info (12023): Found entity 1: twoBitComparator
+Info (12021): Found 1 design units, including 1 entities, in source file newcomparator.bdf
+    Info (12023): Found entity 1: newComparator
 Info (12021): Found 1 design units, including 1 entities, in source file trigger.bdf
     Info (12023): Found entity 1: trigger
 Info (12021): Found 1 design units, including 1 entities, in source file mx_4bit_2x1.bdf
@@ -245,7 +271,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file b2seg.b
     Info (12023): Found entity 1: b2seg
 Info (12021): Found 1 design units, including 1 entities, in source file traffic.bdf
     Info (12023): Found entity 1: traffic
+Info (12021): Found 1 design units, including 1 entities, in source file changetozero.bdf
+    Info (12023): Found entity 1: changeToZero
 Info (12127): Elaborating entity "traffic" for the top level hierarchy
+Warning (275008): Primitive "VCC" of instance "inst32" not used
+Warning (275008): Primitive "NOT" of instance "inst33" not used
 Info (12128): Elaborating entity "b2seg" for hierarchy "b2seg:inst10"
 Info (12128): Elaborating entity "mx_4bit_2x1" for hierarchy "mx_4bit_2x1:inst18"
 Warning (275011): Block or symbol "AND2" of instance "inst5" overlaps another block or symbol
@@ -253,6 +283,10 @@ Info (12128): Elaborating entity "fourbit_register_ce" for hierarchy "fourbit_re
 Info (12128): Elaborating entity "mx_2x1" for hierarchy "fourbit_register_ce:inst8|mx_2x1:inst"
 Info (12128): Elaborating entity "trigger" for hierarchy "trigger:inst2"
 Info (12128): Elaborating entity "d2b" for hierarchy "d2b:inst"
+Info (12128): Elaborating entity "changeToZero" for hierarchy "changeToZero:inst23"
+Info (12128): Elaborating entity "newComparator" for hierarchy "newComparator:inst13"
+Info (12128): Elaborating entity "twoBitComparator" for hierarchy "newComparator:inst13|twoBitComparator:inst8"
+Info (12128): Elaborating entity "counter4" for hierarchy "counter4:inst30"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "com3" is stuck at VCC
     Warning (13410): Pin "com4" is stuck at VCC
@@ -260,14 +294,15 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "com6" is stuck at VCC
     Warning (13410): Pin "com7" is stuck at VCC
     Warning (13410): Pin "com8" is stuck at VCC
-Info (21057): Implemented 62 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+Info (21057): Implemented 64 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 32 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4719 megabytes
-    Info: Processing ended: Mon Nov 21 20:43:45 2022
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:20
+    Info (21061): Implemented 33 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4721 megabytes
+    Info: Processing ended: Mon Dec 05 21:44:35 2022
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:21
 
 
