@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
-// CREATED		"Mon Dec 05 19:54:22 2022"
+// CREATED		"Mon Dec 05 21:45:22 2022"
 
 module traffic(
 	clk,
@@ -88,29 +88,28 @@ wire	[3:0] Din;
 wire	[3:0] Dou;
 wire	[3:0] Dout;
 wire	[3:0] m_out;
-wire	SYNTHESIZED_WIRE_31;
-wire	SYNTHESIZED_WIRE_1;
-wire	[3:0] SYNTHESIZED_WIRE_3;
-reg	SYNTHESIZED_WIRE_32;
-wire	SYNTHESIZED_WIRE_33;
-wire	SYNTHESIZED_WIRE_34;
-wire	SYNTHESIZED_WIRE_35;
-wire	[3:0] SYNTHESIZED_WIRE_10;
-wire	SYNTHESIZED_WIRE_11;
-wire	SYNTHESIZED_WIRE_36;
-wire	SYNTHESIZED_WIRE_14;
-wire	[3:0] SYNTHESIZED_WIRE_16;
-wire	[3:0] SYNTHESIZED_WIRE_17;
-wire	[3:0] SYNTHESIZED_WIRE_18;
-wire	SYNTHESIZED_WIRE_19;
-wire	SYNTHESIZED_WIRE_20;
-wire	SYNTHESIZED_WIRE_23;
-wire	SYNTHESIZED_WIRE_24;
-wire	SYNTHESIZED_WIRE_25;
-wire	SYNTHESIZED_WIRE_26;
-wire	[3:0] SYNTHESIZED_WIRE_28;
+wire	SYNTHESIZED_WIRE_0;
 wire	SYNTHESIZED_WIRE_29;
-wire	SYNTHESIZED_WIRE_30;
+wire	[3:0] SYNTHESIZED_WIRE_2;
+reg	SYNTHESIZED_WIRE_30;
+wire	SYNTHESIZED_WIRE_31;
+wire	SYNTHESIZED_WIRE_32;
+wire	[3:0] SYNTHESIZED_WIRE_7;
+wire	SYNTHESIZED_WIRE_8;
+wire	SYNTHESIZED_WIRE_33;
+wire	SYNTHESIZED_WIRE_11;
+wire	[3:0] SYNTHESIZED_WIRE_13;
+wire	[3:0] SYNTHESIZED_WIRE_14;
+wire	[3:0] SYNTHESIZED_WIRE_15;
+wire	SYNTHESIZED_WIRE_16;
+wire	SYNTHESIZED_WIRE_17;
+wire	SYNTHESIZED_WIRE_20;
+wire	SYNTHESIZED_WIRE_21;
+wire	SYNTHESIZED_WIRE_22;
+wire	SYNTHESIZED_WIRE_24;
+wire	[3:0] SYNTHESIZED_WIRE_26;
+wire	SYNTHESIZED_WIRE_27;
+wire	SYNTHESIZED_WIRE_28;
 
 assign	com3 = 1;
 assign	com4 = 1;
@@ -118,11 +117,10 @@ assign	com5 = 1;
 assign	com6 = 1;
 assign	com7 = 1;
 assign	com8 = 1;
-assign	LED2 = star;
-assign	com1 = SYNTHESIZED_WIRE_32;
-assign	LED1 = SYNTHESIZED_WIRE_14;
-assign	SYNTHESIZED_WIRE_34 = 1;
-assign	SYNTHESIZED_WIRE_23 = 1;
+assign	com1 = SYNTHESIZED_WIRE_30;
+assign	LED2 = SYNTHESIZED_WIRE_30;
+assign	LED1 = SYNTHESIZED_WIRE_11;
+assign	SYNTHESIZED_WIRE_20 = 1;
 
 
 
@@ -144,19 +142,6 @@ d2b	b2v_inst(
 	.b0(Din[0]));
 
 
-always@(posedge clk or negedge SYNTHESIZED_WIRE_31)
-begin
-if (!SYNTHESIZED_WIRE_31)
-	begin
-	SYNTHESIZED_WIRE_32 <= 0;
-	end
-else
-	begin
-	SYNTHESIZED_WIRE_32 <= star;
-	end
-end
-
-
 b2seg	b2v_inst10(
 	.A1(m_out[3]),
 	.B1(m_out[2]),
@@ -172,13 +157,13 @@ b2seg	b2v_inst10(
 
 
 fourbit_register_ce	b2v_inst11(
-	.ce(SYNTHESIZED_WIRE_1),
+	.ce(SYNTHESIZED_WIRE_0),
 	.clk(clk),
-	.rst(SYNTHESIZED_WIRE_31),
-	.Din(SYNTHESIZED_WIRE_3),
+	.rst(SYNTHESIZED_WIRE_29),
+	.Din(SYNTHESIZED_WIRE_2),
 	.Dout(Dou));
 
-assign	com2 =  ~SYNTHESIZED_WIRE_32;
+assign	com2 =  ~SYNTHESIZED_WIRE_30;
 
 
 newComparator	b2v_inst13(
@@ -190,30 +175,29 @@ newComparator	b2v_inst13(
 	.B1(Dou[1]),
 	.B2(Dou[2]),
 	.B3(Dou[3]),
-	.Gt(SYNTHESIZED_WIRE_30),
-	.Eq(SYNTHESIZED_WIRE_29),
-	.Lt(SYNTHESIZED_WIRE_20));
+	.Gt(SYNTHESIZED_WIRE_28),
+	.Eq(SYNTHESIZED_WIRE_27),
+	.Lt(SYNTHESIZED_WIRE_17));
 
 
 fourbit_register_ce	b2v_inst14(
-	.ce(SYNTHESIZED_WIRE_33),
-	.clk(SYNTHESIZED_WIRE_34),
-	.rst(SYNTHESIZED_WIRE_34),
+	.ce(SYNTHESIZED_WIRE_31),
+	.clk(clk),
+	.rst(SYNTHESIZED_WIRE_29),
 	.Din(Dou),
-	.Dout(SYNTHESIZED_WIRE_17));
+	.Dout(SYNTHESIZED_WIRE_14));
 
 
 fourbit_register_ce	b2v_inst15(
-	.ce(SYNTHESIZED_WIRE_35),
-	.clk(SYNTHESIZED_WIRE_34),
-	.rst(SYNTHESIZED_WIRE_34),
+	.ce(SYNTHESIZED_WIRE_32),
+	.clk(clk),
+	.rst(SYNTHESIZED_WIRE_29),
 	.Din(Dout),
-	.Dout(SYNTHESIZED_WIRE_16));
-
+	.Dout(SYNTHESIZED_WIRE_13));
 
 
 mx_4bit_2x1	b2v_inst18(
-	.ce(SYNTHESIZED_WIRE_32),
+	.ce(SYNTHESIZED_WIRE_30),
 	.s0(Dout),
 	.s1(Dou),
 	.m_out(m_out));
@@ -222,77 +206,88 @@ mx_4bit_2x1	b2v_inst18(
 mx_4bit_2x1	b2v_inst19(
 	.ce(shap),
 	.s0(Din),
-	.s1(SYNTHESIZED_WIRE_10),
-	.m_out(SYNTHESIZED_WIRE_28));
+	.s1(SYNTHESIZED_WIRE_7),
+	.m_out(SYNTHESIZED_WIRE_26));
 
 
 trigger	b2v_inst2(
-	.Din(SYNTHESIZED_WIRE_11),
+	.Din(SYNTHESIZED_WIRE_8),
 	.CLK(clk),
-	.rst_n(SYNTHESIZED_WIRE_31),
-	.Dout(SYNTHESIZED_WIRE_36));
+	.rst_n(SYNTHESIZED_WIRE_29),
+	.Dout(SYNTHESIZED_WIRE_33));
 
-assign	SYNTHESIZED_WIRE_1 = SYNTHESIZED_WIRE_36 & star;
+assign	SYNTHESIZED_WIRE_0 = SYNTHESIZED_WIRE_33 & SYNTHESIZED_WIRE_30;
 
-assign	SYNTHESIZED_WIRE_14 =  ~star;
+assign	SYNTHESIZED_WIRE_11 =  ~SYNTHESIZED_WIRE_30;
 
-assign	SYNTHESIZED_WIRE_26 = SYNTHESIZED_WIRE_14 & SYNTHESIZED_WIRE_36;
+assign	SYNTHESIZED_WIRE_24 = SYNTHESIZED_WIRE_11 & SYNTHESIZED_WIRE_33;
 
 
 changeToZero	b2v_inst23(
-	.Din(SYNTHESIZED_WIRE_16),
-	.Dout(SYNTHESIZED_WIRE_10));
+	.Din(SYNTHESIZED_WIRE_13),
+	.Dout(SYNTHESIZED_WIRE_7));
 
 
 changeToZero	b2v_inst24(
-	.Din(SYNTHESIZED_WIRE_17),
-	.Dout(SYNTHESIZED_WIRE_18));
+	.Din(SYNTHESIZED_WIRE_14),
+	.Dout(SYNTHESIZED_WIRE_15));
 
 
 mx_4bit_2x1	b2v_inst25(
 	.ce(shap),
 	.s0(Din),
-	.s1(SYNTHESIZED_WIRE_18),
-	.m_out(SYNTHESIZED_WIRE_3));
+	.s1(SYNTHESIZED_WIRE_15),
+	.m_out(SYNTHESIZED_WIRE_2));
 
-assign	SYNTHESIZED_WIRE_35 = shap & SYNTHESIZED_WIRE_19;
+assign	SYNTHESIZED_WIRE_32 = shap & SYNTHESIZED_WIRE_16;
 
 
-assign	SYNTHESIZED_WIRE_33 = shap & SYNTHESIZED_WIRE_20;
+assign	SYNTHESIZED_WIRE_31 = shap & SYNTHESIZED_WIRE_17;
 
-assign	SYNTHESIZED_WIRE_24 = in5 | in3 | in4 | in2 | in1 | in0;
+assign	SYNTHESIZED_WIRE_21 = in5 | in3 | in4 | in2 | in1 | in0;
 
 
 counter4	b2v_inst30(
-	.clk(SYNTHESIZED_WIRE_35)
+	.clk(SYNTHESIZED_WIRE_32)
 	
 	
 	);
 
 
 counter4	b2v_inst31(
-	.clk(SYNTHESIZED_WIRE_33)
+	.clk(SYNTHESIZED_WIRE_31)
 	
 	
 	);
 
 
 
-assign	SYNTHESIZED_WIRE_25 = in9 | in7 | in6 | in8;
+assign	SYNTHESIZED_WIRE_22 = in9 | in7 | in6 | in8;
 
-assign	SYNTHESIZED_WIRE_11 = SYNTHESIZED_WIRE_24 | SYNTHESIZED_WIRE_25;
+assign	SYNTHESIZED_WIRE_8 = SYNTHESIZED_WIRE_21 | SYNTHESIZED_WIRE_22;
 
-assign	SYNTHESIZED_WIRE_31 =  ~Rst;
+assign	SYNTHESIZED_WIRE_29 =  ~Rst;
+
+
+always@(posedge clk or negedge SYNTHESIZED_WIRE_29)
+begin
+if (!SYNTHESIZED_WIRE_29)
+	begin
+	SYNTHESIZED_WIRE_30 <= 0;
+	end
+else
+	SYNTHESIZED_WIRE_30 <= SYNTHESIZED_WIRE_30 ^ star;
+end
 
 
 fourbit_register_ce	b2v_inst8(
-	.ce(SYNTHESIZED_WIRE_26),
+	.ce(SYNTHESIZED_WIRE_24),
 	.clk(clk),
-	.rst(SYNTHESIZED_WIRE_31),
-	.Din(SYNTHESIZED_WIRE_28),
+	.rst(SYNTHESIZED_WIRE_29),
+	.Din(SYNTHESIZED_WIRE_26),
 	.Dout(Dout));
 
-assign	SYNTHESIZED_WIRE_19 = SYNTHESIZED_WIRE_29 | SYNTHESIZED_WIRE_30;
+assign	SYNTHESIZED_WIRE_16 = SYNTHESIZED_WIRE_27 | SYNTHESIZED_WIRE_28;
 
 
 endmodule

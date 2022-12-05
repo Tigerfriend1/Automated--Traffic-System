@@ -1,5 +1,5 @@
 Timing Analyzer report for traffic
-Mon Nov 21 20:43:54 2022
+Mon Dec 05 21:44:43 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -91,13 +91,13 @@ https://fpgasoftware.intel.com/eula.
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 
 
-+--------------------------------------------------+
-; Fmax Summary                                     ;
-+------------+-----------------+------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
-+------------+-----------------+------------+------+
-; 191.98 MHz ; 191.98 MHz      ; clk        ;      ;
-+------------+-----------------+------------+------+
++-------------------------------------------------+
+; Fmax Summary                                    ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 176.4 MHz ; 176.4 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -106,7 +106,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+---------------+
 ; Clock ; Slack  ; End Point TNS ;
 +-------+--------+---------------+
-; clk   ; -4.209 ; -36.174       ;
+; clk   ; -4.669 ; -37.877       ;
 +-------+--------+---------------+
 
 
@@ -115,7 +115,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+---------------+
 ; Clock ; Slack ; End Point TNS ;
 +-------+-------+---------------+
-; clk   ; 3.757 ; 0.000         ;
+; clk   ; 1.771 ; 0.000         ;
 +-------+-------+---------------+
 
 
@@ -145,23 +145,32 @@ No paths to report.
 +--------+---------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node           ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+---------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
-; -4.209 ; trigger:inst2|inst3 ; fourbit_register_ce:inst8|inst4  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.949      ;
-; -4.209 ; trigger:inst2|inst3 ; fourbit_register_ce:inst8|inst5  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.949      ;
-; -4.209 ; trigger:inst2|inst3 ; fourbit_register_ce:inst8|inst6  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.949      ;
-; -4.209 ; trigger:inst2|inst3 ; fourbit_register_ce:inst8|inst7  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.949      ;
-; -4.014 ; trigger:inst2|inst2 ; trigger:inst2|inst3              ; clk          ; clk         ; 1.000        ; 0.000      ; 4.754      ;
-; -3.831 ; trigger:inst2|inst2 ; fourbit_register_ce:inst11|inst4 ; clk          ; clk         ; 1.000        ; 0.000      ; 4.571      ;
-; -3.831 ; trigger:inst2|inst2 ; fourbit_register_ce:inst11|inst5 ; clk          ; clk         ; 1.000        ; 0.000      ; 4.571      ;
-; -3.831 ; trigger:inst2|inst2 ; fourbit_register_ce:inst11|inst6 ; clk          ; clk         ; 1.000        ; 0.000      ; 4.571      ;
-; -3.831 ; trigger:inst2|inst2 ; fourbit_register_ce:inst11|inst7 ; clk          ; clk         ; 1.000        ; 0.000      ; 4.571      ;
-; -3.824 ; trigger:inst2|inst2 ; fourbit_register_ce:inst8|inst4  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.564      ;
-; -3.824 ; trigger:inst2|inst2 ; fourbit_register_ce:inst8|inst5  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.564      ;
-; -3.824 ; trigger:inst2|inst2 ; fourbit_register_ce:inst8|inst6  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.564      ;
-; -3.824 ; trigger:inst2|inst2 ; fourbit_register_ce:inst8|inst7  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.564      ;
-; -3.091 ; trigger:inst2|inst3 ; fourbit_register_ce:inst11|inst4 ; clk          ; clk         ; 1.000        ; 0.000      ; 3.831      ;
-; -3.091 ; trigger:inst2|inst3 ; fourbit_register_ce:inst11|inst5 ; clk          ; clk         ; 1.000        ; 0.000      ; 3.831      ;
-; -3.091 ; trigger:inst2|inst3 ; fourbit_register_ce:inst11|inst6 ; clk          ; clk         ; 1.000        ; 0.000      ; 3.831      ;
-; -3.091 ; trigger:inst2|inst3 ; fourbit_register_ce:inst11|inst7 ; clk          ; clk         ; 1.000        ; 0.000      ; 3.831      ;
+; -4.669 ; trigger:inst2|inst2 ; fourbit_register_ce:inst11|inst4 ; clk          ; clk         ; 1.000        ; 0.000      ; 5.409      ;
+; -4.669 ; trigger:inst2|inst2 ; fourbit_register_ce:inst11|inst5 ; clk          ; clk         ; 1.000        ; 0.000      ; 5.409      ;
+; -4.669 ; trigger:inst2|inst2 ; fourbit_register_ce:inst11|inst6 ; clk          ; clk         ; 1.000        ; 0.000      ; 5.409      ;
+; -4.571 ; trigger:inst2|inst2 ; fourbit_register_ce:inst11|inst7 ; clk          ; clk         ; 1.000        ; 0.000      ; 5.311      ;
+; -4.092 ; trigger:inst2|inst3 ; fourbit_register_ce:inst8|inst4  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.832      ;
+; -4.092 ; trigger:inst2|inst3 ; fourbit_register_ce:inst8|inst5  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.832      ;
+; -4.092 ; trigger:inst2|inst3 ; fourbit_register_ce:inst8|inst6  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.832      ;
+; -4.092 ; trigger:inst2|inst3 ; fourbit_register_ce:inst8|inst7  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.832      ;
+; -3.929 ; inst7               ; fourbit_register_ce:inst11|inst4 ; clk          ; clk         ; 1.000        ; 0.000      ; 4.669      ;
+; -3.929 ; inst7               ; fourbit_register_ce:inst11|inst5 ; clk          ; clk         ; 1.000        ; 0.000      ; 4.669      ;
+; -3.929 ; inst7               ; fourbit_register_ce:inst11|inst6 ; clk          ; clk         ; 1.000        ; 0.000      ; 4.669      ;
+; -3.831 ; inst7               ; fourbit_register_ce:inst11|inst7 ; clk          ; clk         ; 1.000        ; 0.000      ; 4.571      ;
+; -3.788 ; trigger:inst2|inst2 ; fourbit_register_ce:inst8|inst4  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.528      ;
+; -3.788 ; trigger:inst2|inst2 ; fourbit_register_ce:inst8|inst5  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.528      ;
+; -3.788 ; trigger:inst2|inst2 ; fourbit_register_ce:inst8|inst6  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.528      ;
+; -3.788 ; trigger:inst2|inst2 ; fourbit_register_ce:inst8|inst7  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.528      ;
+; -3.398 ; inst7               ; fourbit_register_ce:inst8|inst4  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.138      ;
+; -3.398 ; inst7               ; fourbit_register_ce:inst8|inst5  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.138      ;
+; -3.398 ; inst7               ; fourbit_register_ce:inst8|inst6  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.138      ;
+; -3.398 ; inst7               ; fourbit_register_ce:inst8|inst7  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.138      ;
+; -3.164 ; trigger:inst2|inst3 ; fourbit_register_ce:inst11|inst4 ; clk          ; clk         ; 1.000        ; 0.000      ; 3.904      ;
+; -3.164 ; trigger:inst2|inst3 ; fourbit_register_ce:inst11|inst5 ; clk          ; clk         ; 1.000        ; 0.000      ; 3.904      ;
+; -3.164 ; trigger:inst2|inst3 ; fourbit_register_ce:inst11|inst6 ; clk          ; clk         ; 1.000        ; 0.000      ; 3.904      ;
+; -3.066 ; trigger:inst2|inst3 ; fourbit_register_ce:inst11|inst7 ; clk          ; clk         ; 1.000        ; 0.000      ; 3.806      ;
+; -1.826 ; inst7               ; inst7                            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.566      ;
+; -1.105 ; trigger:inst2|inst2 ; trigger:inst2|inst3              ; clk          ; clk         ; 1.000        ; 0.000      ; 1.845      ;
 +--------+---------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -170,23 +179,32 @@ No paths to report.
 +-------+---------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node           ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
-; 3.757 ; trigger:inst2|inst3 ; fourbit_register_ce:inst11|inst4 ; clk          ; clk         ; 0.000        ; 0.000      ; 3.831      ;
-; 3.757 ; trigger:inst2|inst3 ; fourbit_register_ce:inst11|inst5 ; clk          ; clk         ; 0.000        ; 0.000      ; 3.831      ;
-; 3.757 ; trigger:inst2|inst3 ; fourbit_register_ce:inst11|inst6 ; clk          ; clk         ; 0.000        ; 0.000      ; 3.831      ;
-; 3.757 ; trigger:inst2|inst3 ; fourbit_register_ce:inst11|inst7 ; clk          ; clk         ; 0.000        ; 0.000      ; 3.831      ;
-; 4.490 ; trigger:inst2|inst2 ; fourbit_register_ce:inst8|inst4  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.564      ;
-; 4.490 ; trigger:inst2|inst2 ; fourbit_register_ce:inst8|inst5  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.564      ;
-; 4.490 ; trigger:inst2|inst2 ; fourbit_register_ce:inst8|inst6  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.564      ;
-; 4.490 ; trigger:inst2|inst2 ; fourbit_register_ce:inst8|inst7  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.564      ;
-; 4.497 ; trigger:inst2|inst2 ; fourbit_register_ce:inst11|inst4 ; clk          ; clk         ; 0.000        ; 0.000      ; 4.571      ;
-; 4.497 ; trigger:inst2|inst2 ; fourbit_register_ce:inst11|inst5 ; clk          ; clk         ; 0.000        ; 0.000      ; 4.571      ;
-; 4.497 ; trigger:inst2|inst2 ; fourbit_register_ce:inst11|inst6 ; clk          ; clk         ; 0.000        ; 0.000      ; 4.571      ;
-; 4.497 ; trigger:inst2|inst2 ; fourbit_register_ce:inst11|inst7 ; clk          ; clk         ; 0.000        ; 0.000      ; 4.571      ;
-; 4.680 ; trigger:inst2|inst2 ; trigger:inst2|inst3              ; clk          ; clk         ; 0.000        ; 0.000      ; 4.754      ;
-; 4.875 ; trigger:inst2|inst3 ; fourbit_register_ce:inst8|inst4  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.949      ;
-; 4.875 ; trigger:inst2|inst3 ; fourbit_register_ce:inst8|inst5  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.949      ;
-; 4.875 ; trigger:inst2|inst3 ; fourbit_register_ce:inst8|inst6  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.949      ;
-; 4.875 ; trigger:inst2|inst3 ; fourbit_register_ce:inst8|inst7  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.949      ;
+; 1.771 ; trigger:inst2|inst2 ; trigger:inst2|inst3              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.845      ;
+; 2.492 ; inst7               ; inst7                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.566      ;
+; 3.732 ; trigger:inst2|inst3 ; fourbit_register_ce:inst11|inst7 ; clk          ; clk         ; 0.000        ; 0.000      ; 3.806      ;
+; 3.830 ; trigger:inst2|inst3 ; fourbit_register_ce:inst11|inst4 ; clk          ; clk         ; 0.000        ; 0.000      ; 3.904      ;
+; 3.830 ; trigger:inst2|inst3 ; fourbit_register_ce:inst11|inst5 ; clk          ; clk         ; 0.000        ; 0.000      ; 3.904      ;
+; 3.830 ; trigger:inst2|inst3 ; fourbit_register_ce:inst11|inst6 ; clk          ; clk         ; 0.000        ; 0.000      ; 3.904      ;
+; 4.064 ; inst7               ; fourbit_register_ce:inst8|inst4  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.138      ;
+; 4.064 ; inst7               ; fourbit_register_ce:inst8|inst5  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.138      ;
+; 4.064 ; inst7               ; fourbit_register_ce:inst8|inst6  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.138      ;
+; 4.064 ; inst7               ; fourbit_register_ce:inst8|inst7  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.138      ;
+; 4.454 ; trigger:inst2|inst2 ; fourbit_register_ce:inst8|inst4  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.528      ;
+; 4.454 ; trigger:inst2|inst2 ; fourbit_register_ce:inst8|inst5  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.528      ;
+; 4.454 ; trigger:inst2|inst2 ; fourbit_register_ce:inst8|inst6  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.528      ;
+; 4.454 ; trigger:inst2|inst2 ; fourbit_register_ce:inst8|inst7  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.528      ;
+; 4.497 ; inst7               ; fourbit_register_ce:inst11|inst7 ; clk          ; clk         ; 0.000        ; 0.000      ; 4.571      ;
+; 4.595 ; inst7               ; fourbit_register_ce:inst11|inst4 ; clk          ; clk         ; 0.000        ; 0.000      ; 4.669      ;
+; 4.595 ; inst7               ; fourbit_register_ce:inst11|inst5 ; clk          ; clk         ; 0.000        ; 0.000      ; 4.669      ;
+; 4.595 ; inst7               ; fourbit_register_ce:inst11|inst6 ; clk          ; clk         ; 0.000        ; 0.000      ; 4.669      ;
+; 4.758 ; trigger:inst2|inst3 ; fourbit_register_ce:inst8|inst4  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.832      ;
+; 4.758 ; trigger:inst2|inst3 ; fourbit_register_ce:inst8|inst5  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.832      ;
+; 4.758 ; trigger:inst2|inst3 ; fourbit_register_ce:inst8|inst6  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.832      ;
+; 4.758 ; trigger:inst2|inst3 ; fourbit_register_ce:inst8|inst7  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.832      ;
+; 5.237 ; trigger:inst2|inst2 ; fourbit_register_ce:inst11|inst7 ; clk          ; clk         ; 0.000        ; 0.000      ; 5.311      ;
+; 5.335 ; trigger:inst2|inst2 ; fourbit_register_ce:inst11|inst4 ; clk          ; clk         ; 0.000        ; 0.000      ; 5.409      ;
+; 5.335 ; trigger:inst2|inst2 ; fourbit_register_ce:inst11|inst5 ; clk          ; clk         ; 0.000        ; 0.000      ; 5.409      ;
+; 5.335 ; trigger:inst2|inst2 ; fourbit_register_ce:inst11|inst6 ; clk          ; clk         ; 0.000        ; 0.000      ; 5.409      ;
 +-------+---------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -195,7 +213,7 @@ No paths to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 17       ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 26       ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -205,7 +223,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 17       ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 26       ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -229,8 +247,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 12    ; 12   ;
-; Unconstrained Input Port Paths  ; 70    ; 70   ;
+; Unconstrained Input Ports       ; 13    ; 13   ;
+; Unconstrained Input Port Paths  ; 68    ; 68   ;
 ; Unconstrained Output Ports      ; 11    ; 11   ;
 ; Unconstrained Output Port Paths ; 65    ; 65   ;
 +---------------------------------+-------+------+
@@ -261,6 +279,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; in7        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; in8        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; in9        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; shap       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; star       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
@@ -300,6 +319,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; in7        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; in8        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; in9        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; shap       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; star       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
@@ -329,7 +349,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Nov 21 20:43:52 2022
+    Info: Processing started: Mon Dec 05 21:44:41 2022
 Info: Command: quartus_sta traffic -c traffic
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -343,14 +363,14 @@ Info (332105): Deriving Clocks
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -4.209
+Info (332146): Worst-case setup slack is -4.669
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.209             -36.174 clk 
-Info (332146): Worst-case hold slack is 3.757
+    Info (332119):    -4.669             -37.877 clk 
+Info (332146): Worst-case hold slack is 1.771
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     3.757               0.000 clk 
+    Info (332119):     1.771               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.289
@@ -362,7 +382,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4695 megabytes
-    Info: Processing ended: Mon Nov 21 20:43:54 2022
+    Info: Processing ended: Mon Dec 05 21:44:43 2022
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

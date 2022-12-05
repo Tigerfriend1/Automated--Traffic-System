@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Mon Nov 21 20:43:45 2022
+Analysis & Synthesis Status : Successful - Mon Dec 05 21:44:35 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : traffic
 Top-level Entity Name : traffic
 Family : MAX V
-Total logic elements : 32
-Total pins : 30
+Total logic elements : 33
+Total pins : 31
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

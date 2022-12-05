@@ -1,11 +1,11 @@
-Fitter Status : Successful - Mon Nov 21 20:43:49 2022
+Fitter Status : Successful - Mon Dec 05 21:44:38 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : traffic
 Top-level Entity Name : traffic
 Family : MAX V
 Device : 5M40ZE64C4
 Timing Models : Final
-Total logic elements : 23 / 40 ( 57 % )
-Total pins : 30 / 54 ( 56 % )
+Total logic elements : 24 / 40 ( 60 % )
+Total pins : 31 / 54 ( 57 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
