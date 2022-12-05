@@ -15,6 +15,7 @@ NET "in7" LOC = L3;
 NET "in8" LOC = K4;
 NET "in9" LOC = K1;
 NET "star" LOC = L4;
+NET "shap" LOC = K3;
 NET "a" LOC = E6;
 NET "b" LOC = E5;
 NET "c" LOC = D5;
