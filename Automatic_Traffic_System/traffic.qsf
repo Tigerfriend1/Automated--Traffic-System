@@ -44,6 +44,7 @@ set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:36:15  NOVEMBER 21, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name BDF_FILE LED.bdf
 set_global_assignment -name BDF_FILE twoBitComparator.bdf
 set_global_assignment -name BDF_FILE newComparator.bdf
 set_global_assignment -name BDF_FILE trigger.bdf
@@ -61,3 +62,4 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
 set_global_assignment -name BDF_FILE new_fourbit_re_ce.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
