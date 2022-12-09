@@ -55,3 +55,7 @@ set_global_assignment -name BDF_FILE counter4.bdf
 set_global_assignment -name BDF_FILE b2seg.bdf
 set_global_assignment -name BDF_FILE traffic.bdf
 set_global_assignment -name BDF_FILE changeToZero.bdf
+set_global_assignment -name BDF_FILE tff_XXX.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
