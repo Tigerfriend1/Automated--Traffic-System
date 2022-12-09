@@ -59,3 +59,5 @@ set_global_assignment -name BDF_FILE tff_XXX.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
+set_global_assignment -name BDF_FILE new_fourbit_re_ce.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
