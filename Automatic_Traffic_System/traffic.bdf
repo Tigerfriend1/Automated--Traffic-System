@@ -3374,14 +3374,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 2720 8)
 )
 (connector
-	(pt 2720 8)
-	(pt 2720 -32)
-)
-(connector
-	(pt 2720 -32)
-	(pt 2784 -32)
-)
-(connector
 	(pt 2664 24)
 	(pt 2720 24)
 )
@@ -3391,11 +3383,19 @@ https://fpgasoftware.intel.com/eula.
 )
 (connector
 	(pt 2768 24)
-	(pt 2768 -16)
+	(pt 2768 0)
 )
 (connector
-	(pt 2768 -16)
-	(pt 2784 -16)
+	(pt 2768 0)
+	(pt 2784 0)
+)
+(connector
+	(pt 2784 16)
+	(pt 2720 16)
+)
+(connector
+	(pt 2720 16)
+	(pt 2720 8)
 )
 (junction (pt 800 576))
 (junction (pt 792 592))
